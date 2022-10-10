@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+<div>
+<h2>Form Requirements</h2>
+<input type="text" name="name" placeholder="Name"><br>
+<input type="date" name="dob" placeholder="DOB"><br>
+<label>Gender :</label>
+<label style="padding:15px">Female</label>
+<input type="radio" name="gender">
+<label>Male</label>
+<input type="radio" name="gender"><br>
+
+
+<input type="number" name="number" placeholder="Phone no"><br>
+<input type="email" name="email" placeholder="Email Id"><br>
+<input type="text" name="address" placeholder="Address"><br>
+<input type="text" list="district" placeholder="District">
+<datalist id="district">
+  <option value="Alappuzha">
+    <option value="Ernakulam">
+  <option value="Kottayam">
+  <option value="Kollam">
+    <option value="Trivandram">
+
+  <!-- ... -->
+</datalist><br>
+
+    <input type="text" list="branches" placeholder="Branches">
+    <datalist id="branches">
+        <select id="Alappuzha">
+
+        <option value="Ambalapuzha">
+    <option value="Kayamkulam">
+            <option value="Kottarakara">
+    <option value="Aluva">
+            <option value="Chengannur">
+    <option value="Pandalam">
+
+            </select>
+        </datalist><br>
+
+<!--        <select id="Alappuzha">-->
+<!--        <option value="Ambalapuzha">-->
+<!--    <option value="Kayamkulam">-->
+<!--            </select>-->
+<!--        <br>-->
+
+<input type="text" list="account" placeholder="Account Type">
+<datalist id="account">
+  <option value="Current">
+    <option value="Savings">
+  <option value="Fixed">
+
+
+  <!-- ... -->
+</datalist><br>
+
+<label>Materials Provided : </label>
+
+  <label>Credit Card</label>
+<input type="checkbox">
+<label>Debit Card</label>
+<input type="checkbox"><br>
+<!--<input type="submit"><br>-->
+  <form method="POST" action="submit/">
+    {% csrf_token %}
+       <input type="submit">
+     </form>
+
+
+<a class="btn btn-secondary" href="{% url 'bankapp:logout' %}">Logout</a>
+
+</div>
+</body>
+</html>

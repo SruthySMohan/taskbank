@@ -1,0 +1,13 @@
+{% load static %}
+<form method="POST">
+     {% csrf_token %}
+    <h2>Login To Continue</h2><br>
+    <input type="text" name="Username" placeholder="Enter Username"><br>
+
+    <input type="text" name="Password" placeholder="Enter password"><br>
+    <input type="text" name="Password1" placeholder="Conform password"><br>
+    <input type="submit"><br>
+     <a class="btn btn-warning" href="{% url 'bankapp:registerform' %}">Register</a>
+
+
+</form>

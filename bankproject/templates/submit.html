@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div>
+    <img class="my_image my_image_padding" src="{% static 'img/success.png' %}" alt=""  width="1295px;" height="550px">
+</div>
+<h3>Your Registration is Successfully Completed.</h3>
+
+<a class="btn btn-warning" href="{% url 'bankapp:home' %}">Return Home Page</a>
+{% endblock %}
